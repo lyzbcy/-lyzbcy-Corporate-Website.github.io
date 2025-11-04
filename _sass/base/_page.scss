@@ -2,6 +2,7 @@
 body {
   overflow-x: hidden;
   @include body-font;
+  scroll-behavior: smooth;
 }
 
 p {
@@ -10,8 +11,12 @@ p {
 
 a {
   color: $primary;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  
   &:hover {
     color: darken($primary, 10%);
+    text-decoration: none;
   }
 }
 
@@ -31,17 +36,35 @@ h6 {
 
 .page-section {
   padding: 100px 0;
+  position: relative;
+  
   h2.section-heading {
     font-size: 40px;
     margin-top: 0;
     margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(135deg, #54bfff 0%, #3699eb 100%);
+      border-radius: 2px;
+    }
   }
+  
   h3.section-subheading {
     font-size: 16px;
     font-weight: 400;
     font-style: italic;
     margin-bottom: 75px;
     text-transform: none;
+    color: $gray-600;
     @include serif-font;
   }
 }

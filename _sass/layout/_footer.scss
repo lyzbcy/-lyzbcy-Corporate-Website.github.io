@@ -1,42 +1,64 @@
 // Styling for the footer
 .footer {
-  padding: 25px 0;
+  padding: 40px 0;
   text-align: center;
+  background: linear-gradient(135deg, $gray-900 0%, darken($gray-900, 5%) 100%);
+  border-top: 1px solid rgba(84, 191, 255, 0.2);
+  
   span.copyright {
     font-size: 90%;
     line-height: 40px;
     text-transform: none;
+    color: rgba(255, 255, 255, 0.8);
     @include heading-font;
   }
+  
   ul.quicklinks {
     font-size: 90%;
     line-height: 40px;
     margin-bottom: 0;
     text-transform: none;
     @include heading-font;
+    
+    a {
+      color: rgba(255, 255, 255, 0.8);
+      transition: all 0.3s ease;
+      
+      &:hover {
+        color: $primary;
+        text-decoration: none;
+      }
+    }
   }
 }
 
 ul.social-buttons {
   margin-bottom: 0;
+  
   li {
+    margin: 0 5px;
+    
     a {
       font-size: 20px;
       line-height: 50px;
       display: block;
       width: 50px;
       height: 50px;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      transition: all 0.3s;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      transition: all 0.3s ease;
       color: white;
-      border-radius: 100%;
+      border-radius: 50%;
       outline: none;
-      background-color: $gray-900;
+      background: linear-gradient(135deg, $gray-800 0%, $gray-900 100%);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      
       &:active,
       &:focus,
       &:hover {
-        background-color: $primary;
+        background: linear-gradient(135deg, #54bfff 0%, #3699eb 100%);
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(84, 191, 255, 0.5);
       }
     }
   }

@@ -1,47 +1,93 @@
 // Styling for the contact section
 section#contact {
   background-color: $gray-900;
-  background-image: url("#{$contact-image}");
+  background-image: linear-gradient(135deg, rgba(84, 191, 255, 0.1) 0%, rgba(54, 162, 235, 0.1) 100%), url("#{$contact-image}");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(33, 37, 41, 0.95) 0%, rgba(33, 37, 41, 0.9) 100%);
+    z-index: 1;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  
   .section-heading {
     color: $white;
   }
+  
+  .section-subheading {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+  
   .form-group {
     margin-bottom: 25px;
+    
     input,
     textarea {
       padding: 20px;
+      border-radius: 10px;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      transition: all 0.3s ease;
+      
+      &:focus {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: $primary;
+        box-shadow: 0 0 0 0.2rem rgba(84, 191, 255, 0.25);
+        transform: translateY(-2px);
+      }
+      
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+      }
     }
+    
     input.form-control {
       height: auto;
     }
+    
     textarea.form-control {
       height: 248px;
+      resize: vertical;
     }
   }
+  
   .form-control:focus {
     border-color: $primary;
-    box-shadow: none;
+    box-shadow: 0 0 0 0.2rem rgba(84, 191, 255, 0.25);
   }
+  
   ::-webkit-input-placeholder {
     font-weight: 700;
-    color: $gray-400;
+    color: rgba(255, 255, 255, 0.6);
     @include heading-font;
   }
   :-moz-placeholder {
     font-weight: 700;
-    color: $gray-400;
+    color: rgba(255, 255, 255, 0.6);
     @include heading-font;
   }
   ::-moz-placeholder {
     font-weight: 700;
-    color: $gray-400;
+    color: rgba(255, 255, 255, 0.6);
     @include heading-font;
   }
   :-ms-input-placeholder {
     font-weight: 700;
-    color: $gray-400;
+    color: rgba(255, 255, 255, 0.6);
     @include heading-font;
   }
 }
