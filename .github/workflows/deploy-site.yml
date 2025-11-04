@@ -1,0 +1,31 @@
+name: Build and Deploy Site
+
+on:
+  push:
+    branches: [ main ]  # 代码推送到main分支时触发
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4  # 拉取代码
+      
+      # 步骤2：设置 Ruby 环境并安装依赖
+      - name: 设置 Ruby 环境
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'  # 根据你的 Gemfile 要求调整版本
+          bundler-cache: true  # 自动缓存并安装依赖
+      
+      # 步骤3：构建 Jekyll 网站
+      - name: 构建网站
+        run: bundle exec jekyll build
+      
+      # 步骤4：部署到 GitHub Pages
+      - name: 部署到Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site  # Jekyll 默认构建输出目录
+
