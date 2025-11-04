@@ -9,6 +9,10 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     
     steps:
       - uses: actions/checkout@v4  # 拉取代码
@@ -59,6 +63,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ${{ env.WORKDIR }}/_site  # Jekyll 默认构建输出目录
+          destination_dir: .  # 部署到 gh-pages 分支的根目录
           # cname: 你的自定义域名（如果有）
       
       # 步骤8：输出部署网址（仅在部署成功时显示）
@@ -67,14 +72,14 @@ jobs:
         run: |
           echo "::notice::🚀 部署成功！"
           echo "::notice::📦 仓库：${{ github.repository }}"
-          echo "::notice::🌐 访问网址：https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          echo "::notice::🌐 访问网址：https://lyzbcy.github.io/corporate-website"
           echo ""
           echo "=========================================="
           echo "🎉 GitHub Pages 部署完成！"
           echo "📦 仓库：${{ github.repository }}"
-          echo "🌐 访问网址：https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          echo "🌐 访问网址：https://lyzbcy.github.io/corporate-website"
           echo "=========================================="
           # 设置输出变量，方便在其他步骤中引用
-          echo "deploy_url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}" >> $GITHUB_OUTPUT
+          echo "deploy_url=https://lyzbcy.github.io/corporate-website" >> $GITHUB_OUTPUT
 
 
