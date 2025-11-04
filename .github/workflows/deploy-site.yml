@@ -13,34 +13,52 @@ jobs:
     steps:
       - uses: actions/checkout@v4  # 拉取代码
       
-      # 步骤2：安装 Ruby 构建依赖（用于编译 Ruby gem 原生扩展）
+      # 步骤2：设置工作目录（如果项目在子目录中）
+      - name: 设置工作目录
+        id: set-workdir
+        run: |
+          if [ -d "agency-jekyll-theme-master" ]; then
+            echo "WORKDIR=${{ github.workspace }}/agency-jekyll-theme-master" >> $GITHUB_ENV
+          else
+            echo "WORKDIR=${{ github.workspace }}" >> $GITHUB_ENV
+          fi
+      
+      # 步骤3：安装 Ruby 构建依赖（用于编译 Ruby gem 原生扩展）
       - name: 安装 Ruby 构建依赖
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential libffi-dev
+          sudo apt-get install -y build-essential libssl-dev libffi-dev zlib1g-dev
       
-      # 步骤3：清理可能损坏的缓存目录
-      - name: 清理缓存目录
-        run: rm -rf vendor/bundle
-      
-      # 步骤4：设置 Ruby 环境并安装依赖
+      # 步骤4：设置 Ruby 环境（先设置环境，再安装依赖）
       - name: 设置 Ruby 环境
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'  # 根据你的 Gemfile 要求调整版本
-          bundler-cache: true  # 自动缓存并安装依赖
+          bundler-cache: false  # 先禁用缓存，手动控制安装过程
       
-      # 步骤5：构建 Jekyll 网站
+      # 步骤5：清理并重新安装依赖（确保使用正确的版本）
+      - name: 清理并安装依赖
+        working-directory: ${{ env.WORKDIR }}
+        run: |
+          # 清理可能损坏的缓存
+          rm -rf vendor/bundle .bundle
+          # 更新 bundler 到最新版本
+          gem update bundler
+          # 强制重新安装所有依赖
+          bundle install --verbose --without development
+      
+      # 步骤6：构建 Jekyll 网站
       - name: 构建网站
+        working-directory: ${{ env.WORKDIR }}
         run: bundle exec jekyll build
       
-      # 步骤6：部署到 GitHub Pages（仅在 main 分支推送时部署）
+      # 步骤7：部署到 GitHub Pages（仅在 main 分支推送时部署）
       - name: 部署到Pages
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'  # 仅在 main 分支推送时部署
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site  # Jekyll 默认构建输出目录
+          publish_dir: ${{ env.WORKDIR }}/_site  # Jekyll 默认构建输出目录
           # cname: 你的自定义域名（如果有）
 
 
