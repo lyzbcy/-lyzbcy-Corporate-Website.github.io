@@ -3,6 +3,8 @@ name: Build and Deploy Site
 on:
   push:
     branches: [ main ]  # 代码推送到main分支时触发
+  pull_request:
+    branches: [ main ]  # PR到main分支时也可触发（用于测试构建）
 
 jobs:
   build-deploy:
@@ -32,11 +34,13 @@ jobs:
       - name: 构建网站
         run: bundle exec jekyll build
       
-      # 步骤6：部署到 GitHub Pages
+      # 步骤6：部署到 GitHub Pages（仅在 main 分支推送时部署）
       - name: 部署到Pages
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'  # 仅在 main 分支推送时部署
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site  # Jekyll 默认构建输出目录
+          # cname: 你的自定义域名（如果有）
 
 
