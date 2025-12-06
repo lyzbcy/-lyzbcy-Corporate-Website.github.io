@@ -24,6 +24,55 @@ $color-team: #D4AF37; // Gold/Yellow
   padding: 20px 0;
 }
 
+// 0. Filter Buttons
+.tree-filters {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+
+  .filter-btn {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      color: white;
+    }
+
+    &.school:hover,
+    &.active-school {
+      background: $color-school;
+      color: #000;
+      box-shadow: 0 0 10px $color-school;
+    }
+
+    &.personal:hover,
+    &.active-personal {
+      background: $color-personal;
+      color: white;
+      box-shadow: 0 0 10px $color-personal;
+    }
+
+    &.team:hover,
+    &.active-team {
+      background: $color-team;
+      color: #000;
+      box-shadow: 0 0 10px $color-team;
+    }
+  }
+}
+
 // 1. Bundled Trunk (Container)
 .tree-trunk-bundle {
   position: absolute;
@@ -274,6 +323,69 @@ $color-team: #D4AF37; // Gold/Yellow
     font-family: "Microsoft YaHei", sans-serif;
     font-size: 12px;
     font-weight: bold;
+  }
+}
+
+// --- Filtering States ---
+// When container has class .filtering-school
+.tree-container.filtering-school {
+
+  .trunk-line.personal,
+  .trunk-line.team {
+    opacity: 0.1;
+  }
+
+  // Dim others
+  .tree-item.personal-item,
+  .tree-item.team-item {
+    opacity: 0.1;
+    transform: scale(0.9);
+    filter: blur(2px);
+    pointer-events: none;
+  }
+
+  .filter-btn.school {
+    @extend .active-school;
+  }
+}
+
+.tree-container.filtering-personal {
+
+  .trunk-line.school,
+  .trunk-line.team {
+    opacity: 0.1;
+  }
+
+  .tree-item.school-item,
+  .tree-item.team-item {
+    opacity: 0.1;
+    transform: scale(0.9);
+    filter: blur(2px);
+    pointer-events: none;
+  }
+
+  .filter-btn.personal {
+    @extend .active-personal;
+  }
+}
+
+.tree-container.filtering-team {
+
+  .trunk-line.school,
+  .trunk-line.personal {
+    opacity: 0.1;
+  }
+
+  .tree-item.school-item,
+  .tree-item.personal-item {
+    opacity: 0.1;
+    transform: scale(0.9);
+    filter: blur(2px);
+    pointer-events: none;
+  }
+
+  .filter-btn.team {
+    @extend .active-team;
   }
 }
 
