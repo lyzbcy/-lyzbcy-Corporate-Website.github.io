@@ -823,39 +823,19 @@ zh: &DEFAULT_ZH
   team:
     title: "我们的优秀团队"
     text: "我们的团队成员"
-    subtext: 我们拥有一支经验丰富、充满激情的团队，致力于为客户提供最优质的服务。**Markdown** 格式支持。
+    subtext:
     section: team
     people:
-      - name: "Kay Garland"
-        role: "首席设计师"
-        image: assets/img/team/500x500.jpg
+      - name: "捞鱼"
+        role: "一个弱小但有梦想的开发者"
+        image: "https://s41.ax1x.com/2025/12/05/pZmPZPH.png"
         social:
-          - url: https://twitter.com
-            icon: fab fa-twitter
-          - url: https://facebook.com
-            icon: fab fa-facebook-f
-          - url: https://linkedin.com
-            icon: fab fa-linkedin-in
-      - name: "Larry Parker"
-        role: "首席营销官"
-        image: assets/img/team/2.jpg
-        social:
-          - url: https://twitter.com
-            icon: fab fa-twitter
-          - url: https://facebook.com
-            icon: fab fa-facebook-f
-          - url: https://linkedin.com
-            icon: fab fa-linkedin-in
-      - name: "Diana Perterson"
-        role: "首席开发工程师"
-        image: assets/img/team/500x500.jpg
-        social:
-          - url: https://twitter.com
-            icon: fab fa-twitter
-          - url: https://facebook.com
-            icon: fab fa-facebook-f
-          - url: https://linkedin.com
-            icon: fab fa-linkedin-in
+          - url: https://www.douyin.com/user/MS4wLjABAAAAyuCPebezrJtaj66VWDIFJSOw6XZgneF8yE_mfJAs0ME?from_tab_name=main
+            icon: fab fa-tiktok
+          - url: https://space.bilibili.com/523537443?spm_id_from=333.1007.0.0
+            icon: fab fa-bilibili
+          - url: https://github.com/lyzbcy
+            icon: fab fa-github
 
   contact:
     title: "联系我们"
@@ -875,16 +855,12 @@ zh: &DEFAULT_ZH
   footer:
     legal: "隐私政策"
     social:
-      - url: https://twitter.com
-        icon: "fab fa-twitter"
-      - url: https://facebook.com
-        icon: "fab fa-facebook-f"
-      - url: https://linkedin.com
-        icon: "fab fa-linkedin-in"
-      - url: https://github.com/raviriley/agency-jekyll-theme
+      - url: https://www.douyin.com/user/MS4wLjABAAAAyuCPebezrJtaj66VWDIFJSOw6XZgneF8yE_mfJAs0ME?from_tab_name=main
+        icon: "fab fa-tiktok"
+      - url: https://space.bilibili.com/523537443?spm_id_from=333.1007.0.0
+        icon: "fab fa-bilibili"
+      - url: https://github.com/lyzbcy
         icon: "fab fa-github"
-      - url: https://instagram.com
-        icon: "fab fa-instagram"
 
 zh-CN: #Chinese (Simplified, China)
   <<: *DEFAULT_ZH

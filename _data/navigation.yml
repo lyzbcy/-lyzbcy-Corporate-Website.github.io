@@ -23,8 +23,7 @@ en: &DEFAULT_EN
       section: team
     - title: "Contact"
       section: contact
-    - title: "Theme Source"
-      url: https://github.com/raviriley/agency-jekyll-theme/
+
 
 en-001: #English (World)
   <<: *DEFAULT_EN
@@ -249,8 +248,7 @@ es: &DEFAULT_ES
       section: equipo
     - title: "Contáctenos"
       section: contacto
-    - title: "Fuente de la plantilla"
-      url: https://github.com/raviriley/agency-jekyll-theme/
+
 
 es-419: #Spanish (Latin America and the Caribbean)
   <<: *DEFAULT_ES
@@ -321,8 +319,7 @@ de: &DEFAULT_DE
       section: Team
     - title: "Kontakt"
       section: Kontakt
-    - title: "Quellcode des Themas"
-      url: https://github.com/raviriley/agency-jekyll-theme/
+
 
 de-AT: #German (Austria)
   <<: *DEFAULT_DE
@@ -355,8 +352,7 @@ zh: &DEFAULT_ZH
       section: team
     - title: "联系我们"
       section: contact
-    - title: "主题源码"
-      url: https://github.com/raviriley/agency-jekyll-theme/
+
 
 zh-CN: #Chinese (Simplified, China)
   <<: *DEFAULT_ZH
