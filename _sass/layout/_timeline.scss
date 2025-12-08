@@ -119,6 +119,7 @@ $color-team: #D4AF37; // Gold/Yellow
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  z-index: 5; // Ensure items (and dates) are ON TOP of the trunk (z-index: 1)
   opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
 
@@ -128,6 +129,22 @@ $color-team: #D4AF37; // Gold/Yellow
     top: 50%;
     height: 3px;
     box-shadow: 0 0 5px currentColor;
+
+    .branch-date {
+      position: absolute;
+      top: 50%;
+      /* Center vertically on the branch line */
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.9);
+      background: #0F0F11;
+      padding: 3px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      white-space: nowrap;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); // Stronger shadow to lift it off trunk
+      z-index: 20; // Ensure it sits on top of everything
+    }
   }
 
   // --- Category Specific Styling ---
@@ -135,8 +152,14 @@ $color-team: #D4AF37; // Gold/Yellow
   &.school-item {
     .tree-branch {
       background: $color-school;
-      border-color: $color-school; // For mobile curves
+      border-color: $color-school;
       color: rgba($color-school, 0.5);
+
+      .branch-date {
+        border-color: $color-school;
+        color: lighten($color-school, 10%);
+        box-shadow: 0 0 5px rgba($color-school, 0.3); // Glow effect
+      }
     }
 
     .tree-content {
@@ -161,8 +184,14 @@ $color-team: #D4AF37; // Gold/Yellow
   &.personal-item {
     .tree-branch {
       background: $color-personal;
-      border-color: $color-personal; // For mobile curves
+      border-color: $color-personal;
       color: rgba($color-personal, 0.5);
+
+      .branch-date {
+        border-color: $color-personal;
+        color: lighten($color-personal, 10%);
+        box-shadow: 0 0 5px rgba($color-personal, 0.3);
+      }
     }
 
     .tree-content {
@@ -187,8 +216,14 @@ $color-team: #D4AF37; // Gold/Yellow
   &.team-item {
     .tree-branch {
       background: $color-team;
-      border-color: $color-team; // For mobile curves
+      border-color: $color-team;
       color: rgba($color-team, 0.5);
+
+      .branch-date {
+        border-color: $color-team;
+        color: lighten($color-team, 10%);
+        box-shadow: 0 0 5px rgba($color-team, 0.3);
+      }
     }
 
     .tree-content {
@@ -221,6 +256,12 @@ $color-team: #D4AF37; // Gold/Yellow
     .tree-branch {
       right: 14px; // Connect exactly to the bundle
       width: 46px;
+
+      .branch-date {
+        right: -14px;
+        transform: translate(50%, -50%);
+        /* Center on spine */
+      }
     }
   }
 
@@ -231,7 +272,14 @@ $color-team: #D4AF37; // Gold/Yellow
     .tree-branch {
       left: 14px;
       width: 46px;
+
+      .branch-date {
+        left: -14px;
+        transform: translate(-50%, -50%);
+        /* Center on spine */
+      }
     }
+
   }
 }
 
