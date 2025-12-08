@@ -14,7 +14,8 @@
     <div class="portfolio-grid-container">
       {% for project in site.portfolio %}
       <div class="portfolio-item">
-        <a class="portfolio-link" data-toggle="modal" href="#p{{ forloop.index }}">
+        <a class="portfolio-link" data-toggle="modal" data-target="#p-{{ project.caption.title | slugify }}"
+          href="#p-{{ project.caption.title | slugify }}">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
               <i class="{{ site.data.style.portfolio-icon | default: " fas fa-plus fa-3x" }}"></i>
@@ -44,7 +45,8 @@
     <div class="portfolio-grid-container">
       {% for project in site.portfolio %}
       <div class="portfolio-item">
-        <a class="portfolio-link" data-toggle="modal" href="#p{{ forloop.index }}">
+        <a class="portfolio-link" data-toggle="modal" data-target="#p-{{ project.caption.title | slugify }}"
+          href="#p-{{ project.caption.title | slugify }}">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
               <i class="{{ site.data.style.portfolio-icon | default: " fas fa-plus fa-3x" }}"></i>

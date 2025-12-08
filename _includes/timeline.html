@@ -32,7 +32,8 @@
 
       <div class="tree-item {% if remainder == 0 %}right{% else %}left{% endif %} {{ category }}-item">
         <div class="tree-branch"></div>
-        <div class="tree-content">
+        <a class="tree-content" data-toggle="modal" data-target="#p-{{ project.caption.title | slugify }}"
+          href="#p-{{ project.caption.title | slugify }}" style="text-decoration: none; color: inherit;">
           <div class="tree-img-wrapper">
             <img src="{{ site.baseurl }}/{{ project.caption.thumbnail }}" alt="{{ project.caption.title }}">
           </div>
@@ -41,7 +42,7 @@
             <span class="project-tag">{{ catText }}</span>
             <p>{{ project.caption.subtitle }}</p>
           </div>
-        </div>
+        </a>
       </div>
       {% endfor %}
 

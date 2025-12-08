@@ -1,13 +1,8 @@
 <!-- Portfolio Modals -->
 {% for project in site.portfolio %}
 {% if site.locale and site.locale != "" and site.locale != nil %}
-<div
-  class="portfolio-modal modal fade"
-  id="p{{ forloop.index }}"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
->
+<div class="portfolio-modal modal fade" id="p-{{ project.caption.title | slugify }}" tabindex="-1" role="dialog"
+  aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="close-modal" data-dismiss="modal">
@@ -22,17 +17,12 @@
               <!-- Project Details Go Here -->
               <h2 class="text-uppercase">{{ project.title }}</h2>
               <p class="item-intro text-muted">{{ project.subtitle }}</p>
-              <img
-                class="img-fluid d-block mx-auto"
-                src="{{ site.baseurl }}/{{ project.image }}"
-                alt="{{ project.alt }}"
-              />
-              <p>{{ project.content }}</p>
-              <button
-                class="btn btn-primary"
-                data-dismiss="modal"
-                type="button"
-              >
+              <img class="img-fluid d-block mx-auto" src="{{ site.baseurl }}/{{ project.image }}"
+                alt="{{ project.alt }}" />
+              <div class="project-content text-left mt-4 mb-4">
+                {{ project.content }}
+              </div>
+              <button class="btn btn-primary" data-dismiss="modal" type="button">
                 <i class="fas fa-times"></i>
                 {{ site.data.sitetext[site.locale].portfolio.closebutton |
                 default: "Close Project" }}
@@ -45,13 +35,8 @@
   </div>
 </div>
 {% else %}
-<div
-  class="portfolio-modal modal fade"
-  id="p{{ forloop.index }}"
-  tabindex="-1"
-  role="dialog"
-  aria-hidden="true"
->
+<div class="portfolio-modal modal fade" id="p-{{ project.caption.title | slugify }}" tabindex="-1" role="dialog"
+  aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="close-modal" data-dismiss="modal">
@@ -66,17 +51,12 @@
               <!-- Project Details Go Here -->
               <h2 class="text-uppercase">{{ project.title }}</h2>
               <p class="item-intro text-muted">{{ project.subtitle }}</p>
-              <img
-                class="img-fluid d-block mx-auto"
-                src="{{ site.baseurl }}/{{ project.image }}"
-                alt="{{ project.alt }}"
-              />
-              <p>{{ project.content }}</p>
-              <button
-                class="btn btn-primary"
-                data-dismiss="modal"
-                type="button"
-              >
+              <img class="img-fluid d-block mx-auto" src="{{ site.baseurl }}/{{ project.image }}"
+                alt="{{ project.alt }}" />
+              <div class="project-content text-left mt-4 mb-4">
+                {{ project.content }}
+              </div>
+              <button class="btn btn-primary" data-dismiss="modal" type="button">
                 <i class="fas fa-times"></i>
                 {{ site.data.sitetext.portfolio.closebutton |
                 default: "Close Project" }}
