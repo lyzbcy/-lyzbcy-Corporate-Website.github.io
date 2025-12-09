@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // 1. Inject Particles.js Library (if not present)
     if (!window.particlesJS) {
         const script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+        script.src = 'assets/js/particles.min.js';
         script.onload = initParticles;
         document.head.appendChild(script);
     } else {
