@@ -1,0 +1,365 @@
+﻿bundle : D:/Ruby34-x64/lib/r
+uby/gems/3.4.0/gems/jekyll-4
+.4.1/lib/jekyll.rb:26: warni
+ng: logger was loaded from t
+he standard library, but wil
+l no longer be part of the d
+efault gems starting from Ru
+by 3.5.0.
+所在位置 行:1 字符: 1
++ bundle exec jekyll build -
+-trace 2>&1 | Out-File -File
+Path "jekyll_er ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
+    + CategoryInfo          
+    : NotSpecified: (D:/Ru  
+  by34-x64/l...rom Ruby 3   
+ .5.0.:String) [], Remot    
+eException
+    + FullyQualifiedErrorId 
+    : NativeCommandError
+ 
+You can add logger to your G
+emfile or gemspec to silence
+ this warning.
+Configuration file: E:/github/Corporate Website/agency-jekyll-theme-master/_config.yml
+ Theme Config file: E:/github/Corporate Website/agency-jekyll-theme-master/_config.yml
+            Source: E:/github/Corporate Website/agency-jekyll-theme-master
+       Destination: E:/github/Corporate Website/agency-jekyll-theme-master/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+DEPRECATION WARNING [import]
+: Sass @import rules are dep
+recated and will be removed 
+in Dart Sass 3.0.0.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+  鈺?3 鈹?@import "base/variab
+les.scss";
+  鈹?        ^^^^^^^^^^^^^^^^
+^^^^^
+  鈺?    E:\github\Corporate 
+Website\agency-jekyll-theme-
+master\assets\css\agency.scs
+s 3:9  root stylesheet
+DEPRECATION WARNING [import]
+: Sass @import rules are dep
+recated and will be removed 
+in Dart Sass 3.0.0.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+  鈺?4 鈹?@import "base/mixins
+.scss";
+  鈹?        ^^^^^^^^^^^^^^^^
+^^
+  鈺?    E:\github\Corporate 
+Website\agency-jekyll-theme-
+master\assets\css\agency.scs
+s 4:9  root stylesheet
+DEPRECATION WARNING [import]
+: Sass @import rules are dep
+recated and will be removed 
+in Dart Sass 3.0.0.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+   鈺?45 鈹?@import "base/page
+.scss";
+   鈹?        ^^^^^^^^^^^^^^^
+^
+   鈺?    E:\github\Corporate
+ Website\agency-jekyll-theme
+-master\assets\css\agency.sc
+ss 45:9  root stylesheet
+DEPRECATION WARNING [import]
+: Sass @import rules are dep
+recated and will be removed 
+in Dart Sass 3.0.0.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+   鈺?48 鈹?@import "component
+s/buttons.scss";
+   鈹?        ^^^^^^^^^^^^^^^
+^^^^^^^^^^
+   鈺?    E:\github\Corporate
+ Website\agency-jekyll-theme
+-master\assets\css\agency.sc
+ss 48:9  root stylesheet
+DEPRECATION WARNING [import]
+: Sass @import rules are dep
+recated and will be removed 
+in Dart Sass 3.0.0.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+   鈺?49 鈹?@import "component
+s/navbar.scss";
+   鈹?        ^^^^^^^^^^^^^^^
+^^^^^^^^^
+   鈺?    E:\github\Corporate
+ Website\agency-jekyll-theme
+-master\assets\css\agency.sc
+ss 49:9  root stylesheet
+DEPRECATION WARNING [global-
+builtin]: Global built-in fu
+nctions are deprecated and w
+ill be removed in Dart Sass 
+3.0.0.
+Use color.adjust instead.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+   鈺?20 鈹?    color: darken(
+$primary, 10%);
+   鈹?           ^^^^^^^^^^^^
+^^^^^^^^^
+   鈺?    base\_page.scss 20:
+12                          
+                            
+         @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 45
+:9  root stylesheet
+DEPRECATION WARNING [color-f
+unctions]: darken() is depre
+cated. Suggestions:
+
+color.scale($color, $lightne
+ss: -19.1011235955%)
+color.adjust($color, $lightn
+ess: -10%)
+
+More info: https://sass-lang
+.com/d/color-functions
+
+   鈺?20 鈹?    color: darken(
+$primary, 10%);
+   鈹?           ^^^^^^^^^^^^
+^^^^^^^^^
+   鈺?    base\_page.scss 20:
+12                          
+                            
+         @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 45
+:9  root stylesheet
+DEPRECATION WARNING [global-
+builtin]: Global built-in fu
+nctions are deprecated and w
+ill be removed in Dart Sass 
+3.0.0.
+Use color.red instead.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+  鈺?3 鈹?  background-color: 
+rgba(red($black), green($bla
+ck), blue($black), 0.85); //
+ Dark Glass
+  鈹?                        
+ ^^^^^^^^^^^
+  鈺?    components\_navbar.s
+css 3:26                    
+                            
+        @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 49
+:9  root stylesheet
+DEPRECATION WARNING [color-f
+unctions]: red() is deprecat
+ed. Suggestion:
+
+color.channel($color, "red",
+ $space: rgb)
+
+More info: https://sass-lang
+.com/d/color-functions
+
+  鈺?3 鈹?  background-color: 
+rgba(red($black), green($bla
+ck), blue($black), 0.85); //
+ Dark Glass
+  鈹?                        
+ ^^^^^^^^^^^
+  鈺?    components\_navbar.s
+css 3:26                    
+                            
+        @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 49
+:9  root stylesheet
+DEPRECATION WARNING [global-
+builtin]: Global built-in fu
+nctions are deprecated and w
+ill be removed in Dart Sass 
+3.0.0.
+Use color.green instead.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+  鈺?3 鈹?  background-color: 
+rgba(red($black), green($bla
+ck), blue($black), 0.85); //
+ Dark Glass
+  鈹?                        
+              ^^^^^^^^^^^^^
+  鈺?    components\_navbar.s
+css 3:39                    
+                            
+        @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 49
+:9  root stylesheet
+DEPRECATION WARNING [color-f
+unctions]: green() is deprec
+ated. Suggestion:
+
+color.channel($color, "green
+", $space: rgb)
+
+More info: https://sass-lang
+.com/d/color-functions
+
+  鈺?3 鈹?  background-color: 
+rgba(red($black), green($bla
+ck), blue($black), 0.85); //
+ Dark Glass
+  鈹?                        
+              ^^^^^^^^^^^^^
+  鈺?    components\_navbar.s
+css 3:39                    
+                            
+        @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 49
+:9  root stylesheet
+DEPRECATION WARNING [global-
+builtin]: Global built-in fu
+nctions are deprecated and w
+ill be removed in Dart Sass 
+3.0.0.
+Use color.blue instead.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+  鈺?3 鈹?  background-color: 
+rgba(red($black), green($bla
+ck), blue($black), 0.85); //
+ Dark Glass
+  鈹?                        
+                            
+ ^^^^^^^^^^^^
+  鈺?    components\_navbar.s
+css 3:54                    
+                            
+        @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 49
+:9  root stylesheet
+DEPRECATION WARNING [color-f
+unctions]: blue() is depreca
+ted. Suggestion:
+
+color.channel($color, "blue"
+, $space: rgb)
+
+More info: https://sass-lang
+.com/d/color-functions
+
+  鈺?3 鈹?  background-color: 
+rgba(red($black), green($bla
+ck), blue($black), 0.85); //
+ Dark Glass
+  鈹?                        
+                            
+ ^^^^^^^^^^^^
+  鈺?    components\_navbar.s
+css 3:54                    
+                            
+        @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 49
+:9  root stylesheet
+DEPRECATION WARNING [global-
+builtin]: Global built-in fu
+nctions are deprecated and w
+ill be removed in Dart Sass 
+3.0.0.
+Use color.adjust instead.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+   鈺?52 鈹?      color: light
+en($primary-yellow, 10%);
+   鈹?             ^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
+   鈺?    components\_navbar.
+scss 52:14                  
+                            
+         @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 49
+:9  root stylesheet
+DEPRECATION WARNING [color-f
+unctions]: lighten() is depr
+ecated. Suggestions:
+
+color.scale($color, $lightne
+ss: 20.987654321%)
+color.adjust($color, $lightn
+ess: 10%)
+
+More info: https://sass-lang
+.com/d/color-functions
+
+   鈺?52 鈹?      color: light
+en($primary-yellow, 10%);
+   鈹?             ^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
+   鈺?    components\_navbar.
+scss 52:14                  
+                            
+         @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 49
+:9  root stylesheet
+WARNING: 32 repetitive depre
+cation warnings omitted.
+Run in verbose mode to see a
+ll warnings.
+                    done in 0.93 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.

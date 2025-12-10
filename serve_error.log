@@ -1,0 +1,483 @@
+﻿bundle : D:/Ruby34-x64/lib/r
+uby/gems/3.4.0/gems/jekyll-4
+.4.1/lib/jekyll.rb:26: warni
+ng: logger was loaded from t
+he standard library, but wil
+l no longer be part of the d
+efault gems starting from Ru
+by 3.5.0.
+所在位置 行:1 字符: 1
++ bundle exec jekyll serve -
+-port 4001 --no-watch 2>&1 |
+ Out-File -File ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          
+    : NotSpecified: (D:/Ru  
+  by34-x64/l...rom Ruby 3   
+ .5.0.:String) [], Remot    
+eException
+    + FullyQualifiedErrorId 
+    : NativeCommandError
+ 
+You can add logger to your G
+emfile or gemspec to silence
+ this warning.
+Configuration file: E:/github/Corporate Website/agency-jekyll-theme-master/_config.yml
+ Theme Config file: E:/github/Corporate Website/agency-jekyll-theme-master/_config.yml
+            Source: E:/github/Corporate Website/agency-jekyll-theme-master
+       Destination: E:/github/Corporate Website/agency-jekyll-theme-master/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+DEPRECATION WARNING [import]
+: Sass @import rules are dep
+recated and will be removed 
+in Dart Sass 3.0.0.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+  鈺?3 鈹?@import "base/variab
+les.scss";
+  鈹?        ^^^^^^^^^^^^^^^^
+^^^^^
+  鈺?    E:\github\Corporate 
+Website\agency-jekyll-theme-
+master\assets\css\agency.scs
+s 3:9  root stylesheet
+DEPRECATION WARNING [import]
+: Sass @import rules are dep
+recated and will be removed 
+in Dart Sass 3.0.0.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+  鈺?4 鈹?@import "base/mixins
+.scss";
+  鈹?        ^^^^^^^^^^^^^^^^
+^^
+  鈺?    E:\github\Corporate 
+Website\agency-jekyll-theme-
+master\assets\css\agency.scs
+s 4:9  root stylesheet
+DEPRECATION WARNING [import]
+: Sass @import rules are dep
+recated and will be removed 
+in Dart Sass 3.0.0.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+   鈺?45 鈹?@import "base/page
+.scss";
+   鈹?        ^^^^^^^^^^^^^^^
+^
+   鈺?    E:\github\Corporate
+ Website\agency-jekyll-theme
+-master\assets\css\agency.sc
+ss 45:9  root stylesheet
+DEPRECATION WARNING [import]
+: Sass @import rules are dep
+recated and will be removed 
+in Dart Sass 3.0.0.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+   鈺?48 鈹?@import "component
+s/buttons.scss";
+   鈹?        ^^^^^^^^^^^^^^^
+^^^^^^^^^^
+   鈺?    E:\github\Corporate
+ Website\agency-jekyll-theme
+-master\assets\css\agency.sc
+ss 48:9  root stylesheet
+DEPRECATION WARNING [import]
+: Sass @import rules are dep
+recated and will be removed 
+in Dart Sass 3.0.0.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+   鈺?49 鈹?@import "component
+s/navbar.scss";
+   鈹?        ^^^^^^^^^^^^^^^
+^^^^^^^^^
+   鈺?    E:\github\Corporate
+ Website\agency-jekyll-theme
+-master\assets\css\agency.sc
+ss 49:9  root stylesheet
+DEPRECATION WARNING [global-
+builtin]: Global built-in fu
+nctions are deprecated and w
+ill be removed in Dart Sass 
+3.0.0.
+Use color.adjust instead.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+   鈺?20 鈹?    color: darken(
+$primary, 10%);
+   鈹?           ^^^^^^^^^^^^
+^^^^^^^^^
+   鈺?    base\_page.scss 20:
+12                          
+                            
+         @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 45
+:9  root stylesheet
+DEPRECATION WARNING [color-f
+unctions]: darken() is depre
+cated. Suggestions:
+
+color.scale($color, $lightne
+ss: -19.1011235955%)
+color.adjust($color, $lightn
+ess: -10%)
+
+More info: https://sass-lang
+.com/d/color-functions
+
+   鈺?20 鈹?    color: darken(
+$primary, 10%);
+   鈹?           ^^^^^^^^^^^^
+^^^^^^^^^
+   鈺?    base\_page.scss 20:
+12                          
+                            
+         @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 45
+:9  root stylesheet
+DEPRECATION WARNING [global-
+builtin]: Global built-in fu
+nctions are deprecated and w
+ill be removed in Dart Sass 
+3.0.0.
+Use color.red instead.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+  鈺?3 鈹?  background-color: 
+rgba(red($black), green($bla
+ck), blue($black), 0.85); //
+ Dark Glass
+  鈹?                        
+ ^^^^^^^^^^^
+  鈺?    components\_navbar.s
+css 3:26                    
+                            
+        @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 49
+:9  root stylesheet
+DEPRECATION WARNING [color-f
+unctions]: red() is deprecat
+ed. Suggestion:
+
+color.channel($color, "red",
+ $space: rgb)
+
+More info: https://sass-lang
+.com/d/color-functions
+
+  鈺?3 鈹?  background-color: 
+rgba(red($black), green($bla
+ck), blue($black), 0.85); //
+ Dark Glass
+  鈹?                        
+ ^^^^^^^^^^^
+  鈺?    components\_navbar.s
+css 3:26                    
+                            
+        @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 49
+:9  root stylesheet
+DEPRECATION WARNING [global-
+builtin]: Global built-in fu
+nctions are deprecated and w
+ill be removed in Dart Sass 
+3.0.0.
+Use color.green instead.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+  鈺?3 鈹?  background-color: 
+rgba(red($black), green($bla
+ck), blue($black), 0.85); //
+ Dark Glass
+  鈹?                        
+              ^^^^^^^^^^^^^
+  鈺?    components\_navbar.s
+css 3:39                    
+                            
+        @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 49
+:9  root stylesheet
+DEPRECATION WARNING [color-f
+unctions]: green() is deprec
+ated. Suggestion:
+
+color.channel($color, "green
+", $space: rgb)
+
+More info: https://sass-lang
+.com/d/color-functions
+
+  鈺?3 鈹?  background-color: 
+rgba(red($black), green($bla
+ck), blue($black), 0.85); //
+ Dark Glass
+  鈹?                        
+              ^^^^^^^^^^^^^
+  鈺?    components\_navbar.s
+css 3:39                    
+                            
+        @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 49
+:9  root stylesheet
+DEPRECATION WARNING [global-
+builtin]: Global built-in fu
+nctions are deprecated and w
+ill be removed in Dart Sass 
+3.0.0.
+Use color.blue instead.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+  鈺?3 鈹?  background-color: 
+rgba(red($black), green($bla
+ck), blue($black), 0.85); //
+ Dark Glass
+  鈹?                        
+                            
+ ^^^^^^^^^^^^
+  鈺?    components\_navbar.s
+css 3:54                    
+                            
+        @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 49
+:9  root stylesheet
+DEPRECATION WARNING [color-f
+unctions]: blue() is depreca
+ted. Suggestion:
+
+color.channel($color, "blue"
+, $space: rgb)
+
+More info: https://sass-lang
+.com/d/color-functions
+
+  鈺?3 鈹?  background-color: 
+rgba(red($black), green($bla
+ck), blue($black), 0.85); //
+ Dark Glass
+  鈹?                        
+                            
+ ^^^^^^^^^^^^
+  鈺?    components\_navbar.s
+css 3:54                    
+                            
+        @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 49
+:9  root stylesheet
+DEPRECATION WARNING [global-
+builtin]: Global built-in fu
+nctions are deprecated and w
+ill be removed in Dart Sass 
+3.0.0.
+Use color.adjust instead.
+
+More info and automated migr
+ator: https://sass-lang.com/
+d/import
+
+   鈺?52 鈹?      color: light
+en($primary-yellow, 10%);
+   鈹?             ^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
+   鈺?    components\_navbar.
+scss 52:14                  
+                            
+         @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 49
+:9  root stylesheet
+DEPRECATION WARNING [color-f
+unctions]: lighten() is depr
+ecated. Suggestions:
+
+color.scale($color, $lightne
+ss: 20.987654321%)
+color.adjust($color, $lightn
+ess: 10%)
+
+More info: https://sass-lang
+.com/d/color-functions
+
+   鈺?52 鈹?      color: light
+en($primary-yellow, 10%);
+   鈹?             ^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
+   鈺?    components\_navbar.
+scss 52:14                  
+                            
+         @import
+    E:\github\Corporate Webs
+ite\agency-jekyll-theme-mast
+er\assets\css\agency.scss 49
+:9  root stylesheet
+WARNING: 32 repetitive depre
+cation warnings omitted.
+Run in verbose mode to see a
+ll warnings.
+                    done in 0.813 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+[31m                    ---
+----------------------------
+-----------------[0m
+[31m      Jekyll 4.4.1   Pl
+ease append `--trace` to the
+ `serve` command [0m
+[31m                     fo
+r any additional information
+ or backtrace. [0m
+[31m                    ---
+----------------------------
+-----------------[0m
+D:/Ruby34-x64/lib/ruby/3.4.0
+/socket.rb:205:in 'Socket#bi
+nd': Permission denied - bin
+d(2) for 127.0.0.1:4001 (Err
+no::EACCES)
+	from D:/Ruby34-x64/lib/ruby
+/3.4.0/socket.rb:205:in 'Add
+rinfo#listen'
+	from D:/Ruby34-x64/lib/ruby
+/3.4.0/socket.rb:1190:in 'bl
+ock in Socket.tcp_server_soc
+kets'
+	from D:/Ruby34-x64/lib/ruby
+/3.4.0/socket.rb:231:in 'Arr
+ay#each'
+	from D:/Ruby34-x64/lib/ruby
+/3.4.0/socket.rb:231:in 'Add
+rinfo.foreach'
+	from D:/Ruby34-x64/lib/ruby
+/3.4.0/socket.rb:1188:in 'So
+cket.tcp_server_sockets'
+	from D:/Ruby34-x64/lib/ruby
+/gems/3.4.0/gems/webrick-1.9
+.2/lib/webrick/utils.rb:60:i
+n 'WEBrick::Utils.create_lis
+teners'
+	from D:/Ruby34-x64/lib/ruby
+/gems/3.4.0/gems/webrick-1.9
+.2/lib/webrick/server.rb:130
+:in 'WEBrick::GenericServer#
+listen'
+	from D:/Ruby34-x64/lib/ruby
+/gems/3.4.0/gems/webrick-1.9
+.2/lib/webrick/server.rb:111
+:in 'WEBrick::GenericServer#
+initialize'
+	from D:/Ruby34-x64/lib/ruby
+/gems/3.4.0/gems/webrick-1.9
+.2/lib/webrick/httpserver.rb
+:47:in 'WEBrick::HTTPServer#
+initialize'
+	from D:/Ruby34-x64/lib/ruby
+/gems/3.4.0/gems/jekyll-4.4.
+1/lib/jekyll/commands/serve.
+rb:216:in 'Class#new'
+	from D:/Ruby34-x64/lib/ruby
+/gems/3.4.0/gems/jekyll-4.4.
+1/lib/jekyll/commands/serve.
+rb:216:in 'Jekyll::Commands:
+:Serve.start_up_webrick'
+	from D:/Ruby34-x64/lib/ruby
+/gems/3.4.0/gems/jekyll-4.4.
+1/lib/jekyll/commands/serve.
+rb:102:in 'Jekyll::Commands:
+:Serve.process'
+	from D:/Ruby34-x64/lib/ruby
+/gems/3.4.0/gems/jekyll-4.4.
+1/lib/jekyll/command.rb:91:i
+n 'block in Jekyll::Command.
+process_with_graceful_fail'
+	from D:/Ruby34-x64/lib/ruby
+/gems/3.4.0/gems/jekyll-4.4.
+1/lib/jekyll/command.rb:91:i
+n 'Array#each'
+	from D:/Ruby34-x64/lib/ruby
+/gems/3.4.0/gems/jekyll-4.4.
+1/lib/jekyll/command.rb:91:i
+n 'Jekyll::Command.process_w
+ith_graceful_fail'
+	from D:/Ruby34-x64/lib/ruby
+/gems/3.4.0/gems/jekyll-4.4.
+1/lib/jekyll/commands/serve.
+rb:85:in 'block (2 levels) i
+n Jekyll::Commands::Serve.in
+it_with_program'
+	from D:/Ruby34-x64/lib/ruby
+/gems/3.4.0/gems/mercenary-0
+.4.0/lib/mercenary/command.r
+b:221:in 'block in Mercenary
+::Command#execute'
+	from D:/Ruby34-x64/lib/ruby
+/gems/3.4.0/gems/mercenary-0
+.4.0/lib/mercenary/command.r
+b:221:in 'Array#each'
+	from D:/Ruby34-x64/lib/ruby
+/gems/3.4.0/gems/mercenary-0
+.4.0/lib/mercenary/command.r
+b:221:in 'Mercenary::Command
+#execute'
+	from D:/Ruby34-x64/lib/ruby
+/gems/3.4.0/gems/mercenary-0
+.4.0/lib/mercenary/program.r
+b:44:in 'Mercenary::Program#
+go'
+	from D:/Ruby34-x64/lib/ruby
+/gems/3.4.0/gems/mercenary-0
+.4.0/lib/mercenary.rb:21:in 
+'Mercenary.program'
+	from D:/Ruby34-x64/lib/ruby
+/gems/3.4.0/gems/jekyll-4.4.
+1/exe/jekyll:15:in '<top (re
+quired)>'
+	from D:/Ruby34-x64/bin/jeky
+ll:25:in 'Kernel#load'
+	from D:/Ruby34-x64/bin/jeky
+ll:25:in '<main>'

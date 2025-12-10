@@ -52,7 +52,7 @@ echo.
 :: 等待后打开浏览器
 echo [1/2] Opening browser in 5 seconds...
 timeout /t 5 /nobreak >nul
-start "" "http://127.0.0.1:4001/corporate-website/"
+start "" "http://127.0.0.1:4002/corporate-website/"
 echo Browser opened!
 echo.
 
@@ -62,7 +62,7 @@ echo Please wait for "Server running..." message.
 echo Press Ctrl+C to stop the server.
 echo.
 echo ============================================
-call bundle exec jekyll serve --port 4001
+call bundle exec jekyll serve --port 4002
 
 :: 如果 Jekyll 异常退出，显示错误信息
 if errorlevel 1 (
