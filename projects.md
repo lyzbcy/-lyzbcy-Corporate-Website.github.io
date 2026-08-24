@@ -91,7 +91,7 @@ permalink: /projects/
         </div>
       </a>
       {% if project.douyin %}
-      <a class="project-index-douyin" href="https://www.douyin.com/video/{{ project.douyin }}" target="_blank" rel="noopener" aria-label="{{ project.title }} 抖音介绍视频">▶ 抖音视频</a>
+      <a class="project-index-douyin" href="https://www.douyin.com/video/{{ project.douyin.first }}" target="_blank" rel="noopener" aria-label="{{ project.title }} 抖音介绍视频">▶ 抖音视频</a>
       {% endif %}
     </article>
     {% endfor %}
