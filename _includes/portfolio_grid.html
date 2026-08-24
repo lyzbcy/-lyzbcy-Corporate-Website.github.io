@@ -46,7 +46,7 @@
         <div class="portfolio-caption">
           <h4>{{ project.caption.title }}</h4>
           <p class="text-muted">{{ project.caption.subtitle }}</p>
-          {% if project.douyin %}<a class="caption-douyin" href= + DY + {{ project.douyin }}" target="_blank" rel="noopener">▶ 有抖音介绍视频</a>{% endif %}
+          {% if project.douyin %}<a class="caption-douyin" href="https://www.douyin.com/video/{{ project.douyin }}" target="_blank" rel="noopener">▶ 有抖音介绍视频</a>{% endif %}
           {% if project.total_score %}
           <div class="score-bar" style="margin-top:.4rem;">
             <div style="display:inline-flex;align-items:center;gap:.3rem;font-size:.78rem;color:#888;">
@@ -108,7 +108,7 @@
         <div class="portfolio-caption">
           <h4>{{ project.caption.title }}</h4>
           <p class="text-muted">{{ project.caption.subtitle }}</p>
-          {% if project.douyin %}<a class="caption-douyin" href= + DY + {{ project.douyin }}" target="_blank" rel="noopener">▶ 有抖音介绍视频</a>{% endif %}
+          {% if project.douyin %}<a class="caption-douyin" href="https://www.douyin.com/video/{{ project.douyin }}" target="_blank" rel="noopener">▶ 有抖音介绍视频</a>{% endif %}
         </div>
       </div>
       {% endfor %}
