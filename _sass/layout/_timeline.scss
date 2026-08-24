@@ -378,3 +378,27 @@ $timeline-bg: #080b12;
   from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
+/* —— 抖音介绍视频角标（v2026.8.24）—— */
+.tree-douyin {
+  position: absolute;
+  top: 12px;
+  right: 70px;
+  z-index: 6;
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: rgba(8, 11, 18, .88);
+  border: 1px solid rgba(37, 244, 238, .55);
+  color: #25F4EE;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background .2s ease, color .2s ease;
+
+  &:hover { background: #25F4EE; color: #06282a; text-decoration: none; }
+}
+
+.tree-item.is-collapsed .tree-douyin { display: none; }

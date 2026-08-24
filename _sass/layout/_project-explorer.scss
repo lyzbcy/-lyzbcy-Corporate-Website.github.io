@@ -89,3 +89,24 @@
   .project-index-grid { grid-template-columns: 1fr; }
   .project-index-cover { height: 210px; }
 }
+
+
+/* —— 归档卡抖音角标（v2026.8.24）—— */
+.project-index-card { position: relative; }
+
+.project-index-douyin {
+  position: absolute;
+  right: 10px;
+  bottom: 118px;
+  z-index: 5;
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: rgba(8, 11, 18, .88);
+  border: 1px solid rgba(37, 244, 238, .55);
+  color: #25F4EE;
+  font-size: .68rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover { background: #25F4EE; color: #06282a; text-decoration: none; }
+}

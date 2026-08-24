@@ -90,6 +90,9 @@
             <p>{{ project.caption.subtitle }}</p>
           </div>
         </a>
+        {% if project.douyin %}
+        <a class="tree-douyin" href= + DY + {{ project.douyin }}" target="_blank" rel="noopener" aria-label="{{ project.caption.title }} 抖音介绍视频">▶ 抖音视频</a>
+        {% endif %}
       </div>
       {% endfor %}
 
