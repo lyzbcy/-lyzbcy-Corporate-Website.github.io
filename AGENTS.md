@@ -56,6 +56,16 @@ douyin:
 - 归档页 `/projects/`：从 frontmatter 自动生成搜索/筛选/排序，无需手维护
 - 作品详情：modal 懒加载正文 + 独立页双入口，正文支持 Markdown + 内联 HTML
 
+## 藏品库（/collection/）
+
+- 页面 `collection.md`，数据 `_data/collection.yml`，藏品图标 `_includes/vault/<figure>.svg`，样式 `_sass/layout/_collection.scss`（在 `assets/css/agency.scss` 引入）
+- 展示逻辑：items 按 `shelf` 字段自动分层上架；`placeholder: true` 是「待入库」占位展品（点击只摇晃不弹窗）
+- 新增藏品的步骤：
+  1. `_data/collection.yml` 的 items 里加一条（编号顺延；`figure` 指向 include 图标名；`story` 一段一条写藏品背后的故事）
+  2. 复用现有 figure 或在 `_includes/vault/` 新增 SVG——**新增 SVG 里的渐变/id 必须全页唯一**（建议按藏品前缀命名，如 `vg-`、`vp-`）
+  3. 藏品对应的工程归档放 `_archive/`（若为 skill 类收藏品），详情弹窗的「查看藏品全貌」按钮链到仓库归档路径
+- 弹窗详情由页面内联 JS 从 `collection.yml` 渲染；入库日期、稀有度等字段缺省时对应行自动隐藏
+
 ## 写作口径
 
 - 正文结构参考现有作品：project-facts（四格速览）→ 解决什么问题 → 核心功能/关键设计 → 难点 → project-outcome（结果清单）

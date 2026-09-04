@@ -344,6 +344,8 @@ zh: &DEFAULT_ZH
       section: portfolio
     - title: "作品时间树"
       section: timeline
+    - title: "藏品库"
+      url: "/collection/"
     - title: "关于我们"
       section: team
 

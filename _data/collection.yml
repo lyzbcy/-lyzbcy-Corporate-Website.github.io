@@ -1,0 +1,68 @@
+# 藏品库数据 —— 捞鱼工作室收藏陈列
+#
+# 新增藏品的步骤（详见 AGENTS.md「藏品库」节）：
+#   1. 在 items 里加一条记录（id 不与现有重复；shelf 指定放第几层货架）
+#   2. figure 对应 _includes/vault/ 下的一个 SVG 文件名（不含扩展名）
+#      ——新藏品优先复用现有 figure；自制新 figure 时注意 SVG 内渐变 id 全页唯一
+#   3. placeholder: true 的是「待入库」占位展品，点击只会有摇晃动画，不弹详情
+#
+# 字段说明：
+#   no          藏品编号（展示用）
+#   plaque_name / plaque_sub   货架下方铭牌的两行文字
+#   collected   入库日期
+#   rarity      稀有度（展示用星级）
+#   storage     存档位置（仓库内路径）
+#   story       详情弹窗正文，一段一条
+#   actions     详情弹窗按钮组，icon 用 Font Awesome 类名
+
+items:
+  - id: skill-001
+    no: NO.001
+    name: 官网开发技能书
+    en: Official Site Dev Skill
+    figure: grimoire
+    shelf: 1
+    plaque_name: 官网开发技能书
+    plaque_sub: "NO.001 · 已入库"
+    collected: 2026-09-03
+    origin: 官网 Banner 宣传更新项目
+    category: 开发 Skill · 工程方法
+    rarity: ★★★☆☆
+    storage: _archive/skills/官网PC端开发skill
+    story:
+      - 一件从「一天上线」的项目里炼出来的技能书。那天傍晚接到需求：首页第一屏换宣传 Banner、更新办公地址，第二天上线。官网是纯静态多页站 + 运行时 i18n，改起来不难，难的是不漏——中英两份语言包、JSON-LD、地图坐标、?v= 缓存版本号，任何一处漏掉都会变成线上事故。
+      - 于是把所有的坑固化成三层结构：渐进式披露的文档（改什么读什么）、变更文件数据库（打包照单核对）、上线 DoD（缺一不可）。CR 环节还请了一个没有上下文的子代理来挑刺，抓出两个阻断项。
+      - 第二天准时上线，零遗漏。这件藏品的意义在于提醒：小需求靠流程兜底，不靠记性。
+    actions:
+      - label: 查看藏品全貌
+        url: https://github.com/lyzbcy/corporate-website/tree/main/_archive/skills/%E5%AE%98%E7%BD%91PC%E7%AB%AF%E5%BC%80%E5%8F%91skill
+        icon: fab fa-github
+        primary: true
+
+  - id: mystery-potion
+    placeholder: true
+    figure: potion
+    shelf: 1
+    plaque_name: "???"
+    plaque_sub: 待入库
+
+  - id: mystery-crystal
+    placeholder: true
+    figure: crystal
+    shelf: 1
+    plaque_name: "???"
+    plaque_sub: 待入库
+
+  - id: mystery-crate
+    placeholder: true
+    figure: crate
+    shelf: 2
+    plaque_name: "???"
+    plaque_sub: 待入库
+
+  - id: mystery-orb
+    placeholder: true
+    figure: orb
+    shelf: 2
+    plaque_name: "???"
+    plaque_sub: 待入库

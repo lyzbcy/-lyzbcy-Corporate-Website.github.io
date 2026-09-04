@@ -1,0 +1,7 @@
+<svg viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="水晶簇">
+  <path d="M46 118 L36 66 L48 34 L58 70 Z" fill="#2c3648" stroke="#5b6880" stroke-width="2"/>
+  <path d="M74 118 L82 60 L68 30 L60 72 Z" fill="#242e3e" stroke="#5b6880" stroke-width="2"/>
+  <path d="M60 118 L58 52 L60 26 L72 74 Z" fill="#31405a" stroke="#5b6880" stroke-width="2" opacity=".95"/>
+  <path d="M30 118 q30 -10 60 0 l-4 8 q-26 -8 -52 0Z" fill="#1d2432" stroke="#4c576e" stroke-width="2"/>
+  <path d="M48 40 L44 62" stroke="#7d93b8" stroke-width="1.6" opacity=".5"/>
+</svg>
